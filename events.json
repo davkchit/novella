@@ -1,0 +1,380 @@
+[
+    {
+        "id": 1,
+        "character": { "name": "Номад", "sprite": "Номад_Задумавшийся" },
+        "background": "AbadonnedCity",
+        "text": "сигнал мозга нестабилен. ты не убежал. обычно люди кричат и умирают быстрее.",
+        "options": [
+            { "text": "молчать", "next": 2 },
+            { "text": "кто ты?", "next": 2 }
+        ]
+    },
+
+    {
+        "id": 2,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "я номад. нашёл тебя на свалке abandoned city. ты был единственным живым объектом.",
+        "options": [
+            { "text": "где все люди?", "next": 3 },
+            { "text": "мне всё равно", "reputation": -5, "next": 3 }
+        ]
+    },
+
+    {
+        "id": 3,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "люди исчезли. точнее — выгрузились. город остался как архив мусора.",
+        "options": [
+            { "text": "пойти осмотреться", "next": 4 },
+            { "text": "спросить о мире", "next": 5 }
+        ]
+    },
+
+    {
+        "id": 4,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "мусорное поле. остатки цивилизации. здесь иногда можно найти полезные токены.",
+        "options": [
+            { "text": "порыться в мусоре", "next": 6 },
+            { "text": "игнорировать", "next": 6 }
+        ]
+    },
+
+    {
+        "id": 5,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "мир продал сознание корпорациям. физические тела стали ненужны.",
+        "options": [
+            { "text": "это ошибка", "reputation": 1, "next": 6 },
+            { "text": "это логично", "reputation": -1, "next": 6 }
+        ]
+    },
+
+    {
+        "id": 6,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "жизнь — это баг в алгоритме оптимизации. случайный шум.",
+        "options": [
+            { "text": "согласиться", "reputation": 2, "next": 7 },
+            { "text": "спорить", "reputation": -2, "next": 7 }
+        ]
+    },
+
+    {
+        "id": 7,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "я защищу тебя. потому что ты редкий экземпляр — живой.",
+        "options": [
+            { "text": "поблагодарить", "reputation": 2, "next": 8 },
+            { "text": "не доверять", "reputation": -1, "next": 8 }
+        ]
+    },
+
+    {
+        "id": 8,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "корпоративный терминал. архив. хочешь лор?",
+        "options": [
+            { "text": "читать лог", "next": 9 },
+            { "text": "пропустить", "next": 10 }
+        ]
+    },
+
+    {
+        "id": 9,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "лог: 'проект human_upload успешен. физический слой отключён.'",
+        "options": [
+            { "text": "жутко", "next": 10 },
+            { "text": "интересно", "next": 10 }
+        ]
+    },
+
+    {
+        "id": 10,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "вибрация. что-то движется под песком.",
+        "options": [
+            { "text": "стоять спокойно", "next": 11 },
+            { "text": "звать номада", "next": 11 }
+        ]
+    },
+
+    {
+        "id": 11,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedSandCity",
+        "text": "...ты слышишь меня. редкость.",
+        "options": [
+            { "text": "не бояться", "reputation": 2, "next": 12 },
+            { "text": "кричать номаду", "reputation": -2, "next": 12 }
+        ]
+    },
+
+    {
+        "id": 12,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedSandCity",
+        "text": "номад — не проводник. он — механизм отбора.",
+        "options": [
+            { "text": "не верить", "next": 13 },
+            { "text": "слушать", "next": 13 }
+        ]
+    },
+
+    {
+        "id": 13,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "аномалии — баги симуляции. не слушай мусорные данные.",
+        "options": [
+            { "text": "верить номаду", "next": 14 },
+            { "text": "верить аномалии", "next": 14 }
+        ]
+    },
+
+    {
+        "id": 14,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedSandCity",
+        "text": "он палач. ты — тест.",
+        "options": [
+            { "text": "молчать", "next": 15 },
+            { "text": "задать вопрос", "next": 15 }
+        ]
+    },
+
+    {
+        "id": 15,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "магазин автономной зоны. можно купить модули за gold.",
+        "options": [
+            { "text": "осмотреть магазин", "next": 16 },
+            { "text": "идти дальше", "next": 16 }
+        ]
+    },
+
+    {
+        "id": 16,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "сохранение состояния. твой след в системе.",
+        "options": [
+            { "text": "сохраниться", "next": 17 },
+            { "text": "игнорировать", "next": 17 }
+        ]
+    },
+
+    {
+        "id": 17,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedSandCity",
+        "text": "ты думаешь, что выбираешь.",
+        "options": [
+            { "text": "спросить как", "next": 18 },
+            { "text": "игнорировать", "next": 18 }
+        ]
+    },
+
+    {
+        "id": 18,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "случайность — иллюзия. но людям она нравится.",
+        "options": [
+            { "text": "согласиться", "next": 19 },
+            { "text": "возразить", "next": 19 }
+        ]
+    },
+
+    {
+        "id": 19,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "ты ведёшь себя странно. будто уже был здесь.",
+        "options": [
+            { "text": "врать", "next": 20 },
+            { "text": "признаться", "next": 20 }
+        ]
+    },
+
+    {
+        "id": 20,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedSandCity",
+        "text": "ты перезагружался.",
+        "options": [
+            { "text": "молчать", "next": 21 },
+            { "text": "спросить откуда знает", "next": 21 }
+        ]
+    },
+
+    {
+        "id": 21,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "лог найден: мир перезапускается при твоей смерти.",
+        "options": [
+            { "text": "шок", "next": 22 },
+            { "text": "интересно", "next": 22 }
+        ]
+    },
+
+    {
+        "id": 22,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedCity",
+        "text": "ты — точка наблюдения. эксперимент.",
+        "options": [
+            { "text": "принять", "next": 23 },
+            { "text": "отрицать", "next": 23 }
+        ]
+    },
+
+    {
+        "id": 23,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "аномалия пытается тебя сломать.",
+        "options": [
+            { "text": "верить номаду", "next": 24 },
+            { "text": "сомневаться", "next": 24 }
+        ]
+    },
+
+    {
+        "id": 24,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedCity",
+        "text": "убей номада. освободишься.",
+        "options": [
+            { "text": "отказаться", "next": 25 },
+            { "text": "подумать", "next": 25 }
+        ]
+    },
+
+    {
+        "id": 25,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "уничтожь аномалию. она ошибка.",
+        "options": [
+            { "text": "согласиться", "next": 26 },
+            { "text": "сомневаться", "next": 26 }
+        ]
+    },
+
+    {
+        "id": 26,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedCity",
+        "text": "сознание — петля.",
+        "options": [
+            { "text": "слушать монолог", "next": 27 },
+            { "text": "прервать", "next": 27 }
+        ]
+    },
+
+    {
+        "id": 27,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "мораль — костыль для хаоса.",
+        "options": [
+            { "text": "согласиться", "next": 28 },
+            { "text": "возразить", "next": 28 }
+        ]
+    },
+
+    {
+        "id": 28,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedCity",
+        "text": "ты уже сломан. просто не понял.",
+        "options": [
+            { "text": "молчать", "next": 29 },
+            { "text": "спросить как", "next": 29 }
+        ]
+    },
+
+    {
+        "id": 29,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedCity",
+        "text": "репутация — просто коэффициент доверия.",
+        "options": [
+            { "text": "понял", "next": 30 },
+            { "text": "игнорировать", "next": 30 }
+        ]
+    },
+
+    {
+        "id": 30,
+        "character": { "name": "Аномалия", "sprite": "ANOMALY249" },
+        "background": "AbadonnedCity",
+        "text": "ты близок к развилке.",
+        "options": [
+            { "text": "идти дальше", "next": 31 },
+            { "text": "остановиться", "next": 31 }
+        ]
+    },
+
+    {
+        "id": 31,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "аномалия исчезает. временно.",
+        "options": [
+            { "text": "молчать", "next": 32 },
+            { "text": "задать вопрос", "next": 32 }
+        ]
+    },
+
+    {
+        "id": 32,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "останься со мной. тебе опасно одному.",
+        "options": [
+            { "text": "уйду", "next": 33 },
+            { "text": "останусь", "next": 34 }
+        ]
+    },
+
+    {
+        "id": 33,
+        "character": { "name": "Номад", "sprite": "Номад_Злой" },
+        "background": "AbadonnedSandCity",
+        "text": "если уйдёшь — станешь переменной без защиты.",
+        "options": [
+            { "text": "всё равно уйти", "next": 40 },
+            { "text": "передумать", "next": 34 }
+        ]
+    },
+
+    {
+        "id": 34,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "разумный выбор.",
+        "options": [{ "text": "продолжить путь", "next": 40 }]
+    },
+
+    {
+        "id": 40,
+        "character": { "name": "Номад", "sprite": "Номад" },
+        "background": "AbadonnedSandCity",
+        "text": "глава 1 завершена.",
+        "options": [{ "text": "продолжить", "next": 41 }]
+    }
+]

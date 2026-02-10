@@ -1,0 +1,110 @@
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#eventText {
+    color: white;
+    font-size: 20px;
+    opacity: 100%;
+    padding: 15px 20px;
+}
+
+#dialogue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    height: 30vh;
+    background: rgba(0, 0, 0, 0.8);
+    /*  border-radius: 20px; */
+    /* border: 2px white solid; */
+}
+
+#speaker {
+    font-size: 26px;
+    font-style: italic;
+    color: white;
+    padding: 15px 20px 0 20px;
+}
+
+#character {
+    max-width: 50vh;
+    max-height: 50vh;
+}
+
+#dialogueCharacterWindow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#options {
+    padding: 0px 20px 20px 20px;
+    display: flex;
+}
+
+.buttonStyle {
+    width: 300px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+    height: 50px;
+    border: none;
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 1s linear 0s;
+}
+
+#hud {
+    top: 20px;
+    right: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: azure;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    width: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    height: 150px;
+}
+
+#hud * {
+    display: flex;
+    align-items: center;
+}
+
+.hud__health_stat,
+.hud__reputation_stat,
+.hud__gold_stat {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    #options {
+        padding: 0px;
+    }
+}
+
+.block__options {
+    display: flex;
+    color: white;
+}
