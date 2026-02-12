@@ -25,17 +25,22 @@ function renderButton(options, index, display) {
     arrowl.style.display = `${display}`;
 }
 
+function setHudStat(element, label, value) {
+    element.textContent = `${label}: ${value}`;
+    element.dataset.value = value;
+}
+
 export function render(character, background, dialogue, options, index = 0) {
     dialogueText.textContent = dialogue;
     chatacterName.textContent = character.name;
     characterImage.src = `imgs/characterImages/${character.sprite}.png`;
     backgroundImage.style.backgroundImage = `url("imgs/backgrounds/${background}.png")`;
     dialogueOptions.innerHTML = ``;
-    healthStat.textContent = `Здоровье: ${gameState.player.health}`;
-    goldStat.textContent = `Деньги: ${gameState.player.gold}`;
-    reputationStat.textContent = `Репутация: ${gameState.player.reputation}`;
+    setHudStat(healthStat, 'Здоровье', gameState.player.health);
+    setHudStat(goldStat, 'Деньги', gameState.player.gold);
+    setHudStat(reputationStat, 'Репутация', gameState.player.reputation);
     if (window.innerWidth <= 768) {
-        renderButton(options, index, 'block');
+        renderButton(options, index, 'flex');
     } else {
         for (let i = 0; i < options.length; i++) {
             renderButton(options, i, 'none');
@@ -65,3 +70,4 @@ export function saveAndRender(events) {
     localStorage.setItem('gameState', JSON.stringify(gameState));
     renderNowEvent(events);
 }
+
