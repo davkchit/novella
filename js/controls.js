@@ -1,10 +1,30 @@
 import { events } from './events.js';
 import { gameState } from './state.js';
-import { render, saveAndRender } from './render.js';
+import { render, saveAndRender, renderNowEvent } from './render.js';
 import { gameConditions } from './gameConditions.js';
-import { dialogueOptions, arrowl, arrowr } from './render.js';
+import {
+    dialogueOptions,
+    arrowl,
+    arrowr,
+    settingsButton,
+    playButton,
+    gameSettingsClose,
+    renderSettings,
+} from './render.js';
 
 export function initControls() {
+    playButton.addEventListener('click', function (ev) {
+        renderNowEvent(events);
+    });
+
+    settingsButton.addEventListener('click', function (ev) {
+        renderSettings('none', 'flex');
+    });
+
+    gameSettingsClose.addEventListener('click', function (ev) {
+        renderSettings('flex', 'none');
+    });
+
     dialogueOptions.addEventListener('click', function (ev) {
         if (ev.target.dataset.next) {
             let gold = ev.target.dataset.gold;

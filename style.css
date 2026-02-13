@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-#main {
+#gameScreen {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -220,7 +220,6 @@ body {
         font-weight: 700;
     }
 
-    
 }
 
 #block__options {
@@ -228,6 +227,6 @@ body {
     color: white;
 }
 
-#dialogue__text {
-    
+.gameSettings {
+    display: none;
 }
