@@ -80,7 +80,7 @@ export function initControls() {
             return event.id === gameState.currentEventId;
         });
         let options = findEvent.options;
-        let button = document.querySelector('.buttonStyle');
+        let button = document.querySelector('.choice-button');
         for (let i = 0; i < options.length; i++) {
             if (
                 options[i].text === button.textContent &&

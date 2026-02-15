@@ -3,11 +3,11 @@ import { gameState } from './state.js';
 export const dialogueOptions = document.querySelector('#options');
 export const arrowr = document.querySelector('#arrowr');
 export const arrowl = document.querySelector('#arrowl');
-const gameMenu = document.querySelector('.gameMenu');
-export const settingsButton = document.querySelector('.settings-button');
-export const playButton = document.querySelector('.play-button');
-export const gameSettings = document.querySelector('.gameSettings');
-export const gameSettingsClose = document.querySelector(".gameSettings__close-button");
+const gameMenu = document.querySelector('[data-screen="menu-screen"]');
+export const settingsButton = document.querySelector('[data-action="open-settings"]');
+export const playButton = document.querySelector('[data-action="start-game"]');
+export const gameSettings = document.querySelector('[data-screen="settings-screen"]');
+export const gameSettingsClose = document.querySelector('[data-action="close-settings"]');
 const dialogueText = document.querySelector('#eventText');
 const backgroundImage = document.querySelector('#gameScreen');
 const characterImage = document.querySelector('#character');
@@ -17,7 +17,7 @@ const goldStat = document.querySelector('.gold_stat');
 const reputationStat = document.querySelector('.reputation_stat');
 
 export function renderGameMenu() {
-    gameMenu.style.display = 'block';
+    gameMenu.style.display = 'flex';
     backgroundImage.style.display = 'none';
     if (gameState.currentEventId > 1) {
         playButton.textContent = "Continue";
@@ -32,6 +32,7 @@ export function renderSettings(menuState, settingsState) {
 function renderButton(options, index, display) {
     const btn = document.createElement('button');
     btn.classList.add('buttonStyle');
+    btn.classList.add('choice-button');
     const button = options[index];
     btn.textContent = button.text;
     btn.dataset.gold = button.gold || 0;

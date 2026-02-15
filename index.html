@@ -10,31 +10,49 @@
         </style>
     </head>
     <body>
-        <div class="gameSettings">
-            <p>Пока в разработке</p>
-            <img src="imgs/close.svg" alt="close" class="gameSettings__close-button">
+        <div class="settings-screen" data-screen="settings-screen">
+            <div class="settings-screen__actions">
+                <span>Звук игры</span>
+                <button></button>
+            </div>
+            <img
+                src="imgs/close.svg"
+                alt="close"
+                class="settings-screen__close-settings"
+                data-action="close-settings"
+            />
         </div>
-        <div class="gameMenu">
-            <button class="play-button gameMenu__play-button">Play</button>
-            <button class="settings-button gameMenu__settings-button">
-                Settings
-            </button>
+
+        <div class="menu-screen" data-screen="menu-screen">
+            <div class="menu-screen__actions">
+                <button class="buttonStyle" data-action="start-game">
+                    Play
+                </button>
+
+                <button class="buttonStyle" data-action="open-settings">
+                    Settings
+                </button>
+            </div>
         </div>
+
         <div id="gameScreen">
             <div id="hud">
                 <div class="hud__element">
                     <img src="imgs/health.svg" alt="" />
                     <span class="health_stat hud__health_stat"></span>
                 </div>
+
                 <div class="hud__element">
                     <img src="imgs/gold.svg" alt="" />
                     <span class="gold_stat hud__gold_stat"></span>
                 </div>
+
                 <div class="hud__element">
                     <img src="imgs/reputation.svg" alt="" />
                     <span class="reputation_stat hud__reputation_stat"></span>
                 </div>
             </div>
+
             <div id="dialogueCharacterWindow">
                 <img src="" alt="Персонаж" id="character" />
                 <div id="dialogue">
@@ -42,6 +60,7 @@
                         <div id="speaker"></div>
                         <div id="eventText"></div>
                     </div>
+
                     <div id="block__options">
                         <div id="arrowl">‹</div>
                         <div id="options"></div>

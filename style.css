@@ -227,6 +227,21 @@ body {
     color: white;
 }
 
-.gameSettings {
+.settings-screen {
     display: none;
+}
+
+.menu-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("imgs/backgrounds/AbadonnedCity.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-screen__actions {
+    display: inline;
 }
