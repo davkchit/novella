@@ -12,6 +12,10 @@ export let gameState = {
             trustedAnomaly: false,
         },
     },
+    settings: {
+        soundOn: true,
+        musicVolume: 0.1
+    }
 };
 
 export function setNewState(newState) {

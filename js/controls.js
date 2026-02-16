@@ -1,5 +1,5 @@
 import { events } from './events.js';
-import { gameState } from './state.js';
+import { gameState, setNewState } from './state.js';
 import { render, saveAndRender, renderNowEvent } from './render.js';
 import { gameConditions } from './gameConditions.js';
 import {
@@ -11,10 +11,30 @@ import {
     gameSettingsClose,
     renderSettings,
 } from './render.js';
+import { playSound } from './music.js';
+import {setGameStateLS} from './localstorage.js'
+
+const soundOnButton = document.querySelector('[data-role="sound-on"]');
 
 export function initControls() {
+    soundOnButton.addEventListener('click', function (ev) {
+        switch (gameState.settings.soundOn) {
+            case true:
+                gameState.settings.soundOn = false;
+                soundOnButton.textContent = 'Включить';
+                break;
+            case false:
+                gameState.settings.soundOn = true;
+                soundOnButton.textContent = 'Выключить';
+                break;
+        }
+        setGameStateLS();
+        playSound();
+    });
+
     playButton.addEventListener('click', function (ev) {
         renderNowEvent(events);
+        playSound();
     });
 
     settingsButton.addEventListener('click', function (ev) {

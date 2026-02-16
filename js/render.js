@@ -4,10 +4,16 @@ export const dialogueOptions = document.querySelector('#options');
 export const arrowr = document.querySelector('#arrowr');
 export const arrowl = document.querySelector('#arrowl');
 const gameMenu = document.querySelector('[data-screen="menu-screen"]');
-export const settingsButton = document.querySelector('[data-action="open-settings"]');
+export const settingsButton = document.querySelector(
+    '[data-action="open-settings"]',
+);
 export const playButton = document.querySelector('[data-action="start-game"]');
-export const gameSettings = document.querySelector('[data-screen="settings-screen"]');
-export const gameSettingsClose = document.querySelector('[data-action="close-settings"]');
+export const gameSettings = document.querySelector(
+    '[data-screen="settings-screen"]',
+);
+export const gameSettingsClose = document.querySelector(
+    '[data-action="close-settings"]',
+);
 const dialogueText = document.querySelector('#eventText');
 const backgroundImage = document.querySelector('#gameScreen');
 const characterImage = document.querySelector('#character');
@@ -15,18 +21,27 @@ const chatacterName = document.querySelector('#speaker');
 const healthStat = document.querySelector('.health_stat');
 const goldStat = document.querySelector('.gold_stat');
 const reputationStat = document.querySelector('.reputation_stat');
+const soundOnButton = document.querySelector('[data-role="sound-on"]');
 
 export function renderGameMenu() {
     gameMenu.style.display = 'flex';
     backgroundImage.style.display = 'none';
     if (gameState.currentEventId > 1) {
-        playButton.textContent = "Continue";
+        playButton.textContent = 'Continue';
     }
 }
 
 export function renderSettings(menuState, settingsState) {
     gameMenu.style.display = `${menuState}`;
     gameSettings.style.display = `${settingsState}`;
+    switch (gameState.settings.soundOn) {
+        case true:
+            soundOnButton.textContent = 'Выключить';
+            break;
+        case false:
+            soundOnButton.textContent = 'Включить';
+            break;
+    }
 }
 
 function renderButton(options, index, display) {

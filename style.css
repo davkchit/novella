@@ -229,6 +229,12 @@ body {
 
 .settings-screen {
     display: none;
+    background-image: url("imgs/backgrounds/AbadonnedCity.png");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    position: relative;
 }
 
 .menu-screen {
@@ -244,4 +250,12 @@ body {
 
 .menu-screen__actions {
     display: inline;
+}
+
+.settings-screen__close-image {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

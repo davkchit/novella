@@ -1,12 +1,22 @@
-const mainSound = new Audio('music/mainSound.mp3');
-mainSound.volume = 0.1;
-mainSound.autoplay = true;
+import { gameState } from './state.js';
 
-export function play() {
-    mainSound.play();
+const mainSound = new Audio('music/mainSound.mp3');
+mainSound.volume = gameState.settings.musicVolume;
+mainSound.loop = true;
+
+export function playSound() {
+    const soundOn = gameState.settings.soundOn
+    switch (soundOn) {
+        case true:
+            mainSound.play();
+            break;
+        case false:
+            mainSound.pause();
+            break;
+    }
 }
 
 export function stop() {
     mainSound.pause();
-    audio.currentTime = 0;
+    mainSound.currentTime = 0;
 }
