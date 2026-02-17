@@ -6,6 +6,18 @@ body {
     margin: 0;
 }
 
+.gameScreen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
 #gameScreen {
     display: flex;
     flex-direction: column;
@@ -229,12 +241,44 @@ body {
 
 .settings-screen {
     display: none;
+    align-items: center;
+    justify-content: center;
     background-image: url("imgs/backgrounds/AbadonnedCity.png");
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
     position: relative;
+}
+
+.settings-screen__actions {
+    width: min(560px, calc(100vw - 32px));
+    min-height: 84px;
+    padding: 18px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-sizing: border-box;
+    background: rgba(8, 12, 20, 0.86);
+    border: 1px solid rgba(130, 210, 255, 0.35);
+    box-shadow:
+        0 12px 34px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.settings-screen__actions > span {
+    color: #f3f7ff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.settings-screen__actions .buttonStyle {
+    width: auto;
+    min-width: 220px;
+    margin-right: 0;
 }
 
 .menu-screen {
@@ -256,6 +300,109 @@ body {
     width: 36px;
     height: 36px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgba(8, 10, 14, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 6px;
+}
+
+.gameScreen__menu {
+    display: none;
+    position: fixed;
+    top: 74px;
+    left: 20px;
+    width: 280px;
+    z-index: 25;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(8, 12, 20, 0.88);
+    border: 1px solid rgba(130, 210, 255, 0.32);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.gameScreen__menu--open {
+    display: flex;
+}
+
+.gameScreen__menu .buttonStyle {
+    width: 100%;
+    margin-right: 0;
+    font-size: 15px;
+    min-height: 46px;
+}
+
+.gameScreen__menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 30;
+    background-image: url("imgs/menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(130, 210, 255, 0.4);
+    background-color: rgba(8, 12, 20, 0.88);
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.gameScreen__menu-toggle--open {
+    background-image: url("imgs/close.svg");
+}
+
+@media (max-width: 768px) {
+    .gameScreen__menu-toggle {
+        top: 74px;
+        left: 12px;
+        width: 38px;
+        height: 38px;
+        background-size: 20px 20px;
+    }
+
+    .gameScreen__menu {
+        top: 120px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        padding: 10px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .gameScreen__menu .buttonStyle {
+        font-size: 14px;
+        min-height: 44px;
+    }
+
+    .settings-screen__actions {
+        width: calc(100vw - 24px);
+        padding: 14px;
+        border-radius: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .settings-screen__actions > span {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .settings-screen__actions .buttonStyle {
+        width: 100%;
+        min-width: 0;
+    }
 }

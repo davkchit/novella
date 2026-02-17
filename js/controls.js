@@ -1,6 +1,6 @@
 import { events } from './events.js';
 import { gameState, setNewState } from './state.js';
-import { render, saveAndRender, renderNowEvent } from './render.js';
+import { render, saveAndRender, renderNowEvent, renderGameMenu} from './render.js';
 import { gameConditions } from './gameConditions.js';
 import {
     dialogueOptions,
@@ -12,11 +12,28 @@ import {
     renderSettings,
 } from './render.js';
 import { playSound } from './music.js';
-import {setGameStateLS} from './localstorage.js'
+import { setGameStateLS } from './localstorage.js';
 
+const menuToggle = document.querySelector('[data-action="menu-toggle"]');
 const soundOnButton = document.querySelector('[data-role="sound-on"]');
+const gameScreenMenu = document.querySelector('[data-screen="game-menu"]');
+const openMenu = document.querySelector('[data-action="open-menu"]');
+const openSettingss = document.querySelector('[data-action="open-settingss"]');
 
 export function initControls() {
+    openMenu.addEventListener('click', () => {
+        renderGameMenu()
+    });
+
+    openSettingss.addEventListener('click', () => {
+        renderSettings('none', 'flex');
+    });
+
+    menuToggle.addEventListener('click', function (ev) {
+        gameScreenMenu.classList.toggle('gameScreen__menu--open');
+        menuToggle.classList.toggle('gameScreen__menu-toggle--open');
+    });
+
     soundOnButton.addEventListener('click', function (ev) {
         switch (gameState.settings.soundOn) {
             case true:

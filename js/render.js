@@ -15,7 +15,7 @@ export const gameSettingsClose = document.querySelector(
     '[data-action="close-settings"]',
 );
 const dialogueText = document.querySelector('#eventText');
-const backgroundImage = document.querySelector('#gameScreen');
+export const backgroundImage = document.querySelector('.gameScreen');
 const characterImage = document.querySelector('#character');
 const chatacterName = document.querySelector('#speaker');
 const healthStat = document.querySelector('.health_stat');
@@ -34,6 +34,7 @@ export function renderGameMenu() {
 export function renderSettings(menuState, settingsState) {
     gameMenu.style.display = `${menuState}`;
     gameSettings.style.display = `${settingsState}`;
+    backgroundImage.style.display = 'none';
     switch (gameState.settings.soundOn) {
         case true:
             soundOnButton.textContent = 'Выключить';

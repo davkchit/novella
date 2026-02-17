@@ -35,7 +35,19 @@
             </div>
         </div>
 
-        <div id="gameScreen">
+        <div class="gameScreen">
+            <img class="gameScreen__menu-toggle" data-action="menu-toggle"></img>
+            <div class="gameScreen__menu" data-screen="game-menu">
+                <button class="gameScreen__menu-button buttonStyle" data-action="open-menu">
+                    Выйти в меню
+                </button>
+                <button
+                    class="gameScreen__menu-button buttonStyle"
+                    data-action="open-settingss"
+                >
+                    Открыть настройки
+                </button>
+            </div>
             <div id="hud">
                 <div class="hud__element">
                     <img src="imgs/health.svg" alt="" />
